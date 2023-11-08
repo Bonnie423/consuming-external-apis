@@ -1,5 +1,5 @@
 import request from 'superagent'
-import { Welcome } from '../models/welcome.ts'
+import { Welcome } from '../../models/welcome.ts'
 
 const serverURL = '/api/v1'
 
@@ -8,3 +8,5 @@ export function getWelcome(): Promise<Welcome> {
   return request.get(`${serverURL}/welcome`).then((response) => response.body)
 }
 // ***   ***   ***
+
+
